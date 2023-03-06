@@ -14,5 +14,15 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "laravel/ui": "^5.0@dev"
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wemade\\LaravelAdmin\\WeMadeServiceProvider"
+            ]
+        }
+    }
 }
