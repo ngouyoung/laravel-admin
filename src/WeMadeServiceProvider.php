@@ -33,6 +33,6 @@ class WeMadeServiceProvider extends ServiceProvider
 
     public function loadViews()
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'Wemade');
+        $this->loadViewsFrom(__DIR__.'/../resources/views/backend', 'backend');
     }
 }
