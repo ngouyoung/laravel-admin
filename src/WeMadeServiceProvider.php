@@ -18,7 +18,7 @@ class WeMadeServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-//        $this->
+        $this->loadViews();
     }
 
     public function loadRoutes()
