@@ -1,6 +1,6 @@
 <?php
 
-namespace Wemade\LaravelAdmin\Backend\Auth;
+namespace Wemade\LaravelAdmin\app\Http\Controllers\Backend\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
