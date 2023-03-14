@@ -3,7 +3,7 @@ namespace Wemade\LaravelAdmin;
 
 use Illuminate\Support\ServiceProvider;
 
-class WeMadeServiceProvider extends ServiceProvider
+class AppServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
@@ -18,7 +18,10 @@ class WeMadeServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->loadViews();
+        $this->loadViewsFrom(__DIR__ . '/resources/views/backend', 'backend');
+        $this->publishes([
+            __DIR__ . '/resources/views' => resource_path('views')
+            ]);
     }
 
     public function loadRoutes()
@@ -33,6 +36,6 @@ class WeMadeServiceProvider extends ServiceProvider
 
     public function loadViews()
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views/backend', 'backend');
+        $this->loadViewsFrom(__DIR__ . '/resources/views/backend', 'backend');
     }
 }
